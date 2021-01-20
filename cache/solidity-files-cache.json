@@ -1,43 +1,9 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "C:\\Users\\theoc\\hardhat-hackathon-boilerplate\\node_modules\\hardhat\\console.sol": {
-      "lastModificationDate": 1611050300687,
-      "contentHash": "c20b2460755f312099ccd61427237ded",
-      "sourceName": "hardhat/console.sol",
-      "solcConfig": {
-        "version": "0.7.3",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.4.22 <0.8.0"
-      ],
-      "artifacts": [
-        "console"
-      ]
-    },
-    "C:\\Users\\theoc\\hardhat-hackathon-boilerplate\\contracts\\MiniStateMachineHardhat.sol": {
-      "lastModificationDate": 1611076978088,
-      "contentHash": "0a217810bfa656735a56c7cf44ceb276",
+    "/Users/ju/Desktop/StateMachineHardhat/contracts/MiniStateMachineHardhat.sol": {
+      "lastModificationDate": 1611152102417,
+      "contentHash": "b5d7f7944fcda77e91bf6a87608d13cf",
       "sourceName": "contracts/MiniStateMachineHardhat.sol",
       "solcConfig": {
         "version": "0.7.3",

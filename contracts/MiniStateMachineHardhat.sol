@@ -2,42 +2,50 @@
 
 pragma solidity >=0.6.0 <0.8.0;
 
-/*import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol";*/
+contract MiniStateMachine {
 
-contract MiniStateMachine /*is Ownable*/ {
+  //DECLARATIONS
+
+  uint public montant = 1000000000000000; // 0.001 ETH
+  uint public x;
+  address payable public owner;
+  event Updated(address user, uint _x);
 
   //INITIALISATION
 
-  uint public montant = 1;
-  uint public x;
-  mapping(address => uint) public balances;
-  address public owner;
-
   constructor() public
   {
-    owner=msg.sender;
+    owner = msg.sender;
   }
-  event Updated (address user , uint _x);
 
-  //FONCTION
+  //FONCTIONS
 
-  function setValue(uint _x) public /*onlyOwner*/
+  function setValue(uint _x) public
   {
-    require ( msg.sender == owner, "You're not owner");
+    require (
+        msg.sender == owner,
+        "You're not owner"
+        );
+
     x = _x;
     emit Updated(msg.sender, _x);
   }
 
+  //MUTATEURS
   function setValuePayable(uint _x) public payable
   {
-    require((montant/1000) <= balances[msg.sender], "Fonds monetaire insuffisant");
-    balances[msg.sender] -= (montant/1000);
+    require(
+        msg.value >= montant,
+        "Fonds insuffisants"
+        );
+
     x = _x;
+    owner.transfer(msg.value);
     emit Updated(msg.sender, _x);
   }
 
+  //ACCESSEURS
   function getX() public view returns(uint){
     return x;
   }
-
 }

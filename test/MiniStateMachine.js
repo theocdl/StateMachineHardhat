@@ -36,22 +36,19 @@ describe("Mini State Machine contract", function () {
       expect(a).to.equal(15);
     });
 
-    it("Addres1 can't change value by setValue", async  function (){
+    it("Address1 can't change value by setValue", async function() {
       await expect(hardhatMSM.connect(adress1).setValue(3)).to.be.revertedWith("You're not owner");
     });
 
-    it("Owner change value by setValuePayable", async function ()
+    it("Owner change value by setValuePayable", async function()
     {
-      await hardhatMSM.setValuePayable(11);
-      a= await hardhatMSM.getX();
-      expect(a).to.equal(11);
+      await expect(hardhatMSM.connect(owner).setValuePayable(3)).to.be.revertedWith("Fonds insuffisants");
     });
 
-    it("Addres1 change value by setValuePayable", async  function (){
-      await expect(hardhatMSM.connect(adress1).setValuePayable(8));
-      a= await hardhatMSM.getX();
-      expect(a).to.equal(8);
+    it("Address1 change value by setValuePayable", async function (){
+      await expect(hardhatMSM.connect(adress1).setValuePayable(3)).to.be.revertedWith("Fonds insuffisants");
     });
+
 
   });
 
