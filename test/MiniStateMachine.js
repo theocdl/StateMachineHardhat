@@ -8,7 +8,8 @@ describe("Mini State Machine contract", function () {
     let owner;
     let address1;
     let c =1000000000000000; //1e15
-
+    
+    //let d =ethers.utils.parseEther('1'); pour pouvoir faire une transaction de 1eth ou plus
 
     beforeEach(async function () {
         // Get the ContractFactory and Signers here.
