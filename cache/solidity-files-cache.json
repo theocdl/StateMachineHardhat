@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/ju/Desktop/StateMachineHardhat/contracts/MiniStateMachineHardhat.sol": {
-      "lastModificationDate": 1611152102417,
-      "contentHash": "b5d7f7944fcda77e91bf6a87608d13cf",
+      "lastModificationDate": 1611231172262,
+      "contentHash": "354a790bc8c7eb52183f18c9a93749db",
       "sourceName": "contracts/MiniStateMachineHardhat.sol",
       "solcConfig": {
         "version": "0.7.3",

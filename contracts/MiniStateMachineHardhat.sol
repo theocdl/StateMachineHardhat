@@ -6,7 +6,7 @@ contract MiniStateMachine {
 
   //DECLARATIONS
 
-  uint public montant = 1000000000000000; // 0.001 ETH
+  uint public montant = 1; // 0.001 ETH
   uint public x;
   address payable public owner;
   event Updated(address user, uint _x);
